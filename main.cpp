@@ -10,11 +10,10 @@ int main(int argc, char *argv[]) {
         int m;
         int expected;
     };
-    test_case test_cases[] = {
-        {10, 3, 19},
-        {5, 6, 15},
-        {5, 1, -15}
-
+    const test_case test_cases[] = {
+        {.n=10, .m=3, .expected= 9},
+        {.n=5,  .m=6, .expected= 15},
+        {.n=5,  .m=1, .expected=-15}
     };
 
     for (const auto & test_case : test_cases) {
