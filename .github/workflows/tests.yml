@@ -1,0 +1,18 @@
+name: C/C++ CI
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: cmake
+      run: cmake -S . -B build
+    - name: make
+      run: make
+    - name: run tests
+      run: ./Build/2025-05-27
