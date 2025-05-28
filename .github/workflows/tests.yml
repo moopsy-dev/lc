@@ -13,6 +13,6 @@ jobs:
     - name: cmake
       run: cmake -S . -B build
     - name: make
-      run: cd Build; make
+      run: make -C build
     - name: run tests
       run: ./Build/2025-05-27
