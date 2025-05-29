@@ -2,17 +2,26 @@
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
+    // Documentation for launch.json attributes:
+    // https://code.visualstudio.com/docs/debugtest/debugging-configuration#_launchjson-attributes
+    // "name", "type", and "request" (NTR) are mandatory.
+
+    // Variables available in launch.json:
+    // https://code.visualstudio.com/docs/reference/variables-reference
+
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(lldb) Launch",
+            "name": "(lldb) Launch current leetcode solution",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/Build/2025-05-27",
+            "program": "${workspaceRoot}/build/${fileDirnameBasename}/${fileDirnameBasename}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
+            "internalConsoleOptions": "openOnSessionStart",
             "externalConsole": false,
             "MIMode": "lldb"
         }
